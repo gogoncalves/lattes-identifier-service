@@ -21,7 +21,7 @@
 
 <h2>Como utilizar</h2>
 
-<p>Para utilizar esta API, siga os passos abaixo:</p>
+<p>Para utilizar esta API, siga os passos abaixo: </p>
 
 <ol>
   <li>Clone o repositório em sua máquina:</li>
