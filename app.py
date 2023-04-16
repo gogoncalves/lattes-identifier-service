@@ -3,7 +3,7 @@ from flasgger import Swagger
 from domain.lattes_validator import LattesValidator
 
 app = Flask(__name__)
-swagger = Swagger(app)
+swagger = Swagger(app, template_file='swagger.yml')
 
 validator = LattesValidator()
 
@@ -17,19 +17,6 @@ def custom_startup_message():
 
 @app.route('/lattes/<int:lattes_number>', methods=['GET'])
 def validate_lattes(lattes_number):
-    """
-    parameters:
-        - name: lattes_number
-          in: path
-          description: Número id Lattes
-          type: integer
-          required: true
-    responses:
-        200:
-            description: Lattes validado com sucesso
-        400:
-            description: Número de identificação Lattes inválido
-    """
     if validator.validate_lattes(lattes_number):
         data = {'id_lattes': lattes_number,
                 'message': 'Lattes validado com sucesso',

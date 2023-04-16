@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
----
-
-The above license applies to the `lattes-identifier-api` software project, including any modifications or derivatives thereof, as made available by Gustavo Goncalves ("the Licensor") on the GitHub repository located at https://github.com/GOGoncalves/lattes-identifier-api ("the Repository").
-
-For the purposes of this license, "the Software" shall be understood to include the code, documentation, and any other files and materials included in the Repository.
-
-This license is provided to you as a grant of certain permissions and is not an agreement, warranty, or guarantee of any kind, either express or implied. The Licensor shall not be liable for any claims, damages, or other liability arising from the use or distribution of the Software, either in whole or in part, by any party. By using or distributing the Software, you agree to be bound by the terms of this license. If you do not agree to the terms of this license, you may not use or distribute the Software.

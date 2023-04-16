@@ -16,8 +16,10 @@
 <h2>Instalação</h2>
 
 <p>Para instalar os pacotes necessários, basta utilizar o comando abaixo:</p>
-
-<pre><code>pip install flask pandas mysql-connector-python flasgger</code></pre>
+<h4>Linux:</h4>
+<pre><code>pip install -r requirements.txt</code></pre>
+<h4>Windows:</h4>
+<pre><code>py -m pip install -r requirements.txt</code></pre>
 
 <h2>Como utilizar</h2>
 
@@ -28,7 +30,10 @@
   <pre><code>git clone https://github.com/GOGoncalves/api-lattes</code></pre>
   <li>Abra o arquivo db_config.txt localizado na pasta config e configure com as informações do seu banco de dados MySQL. Caso não possua um banco de dados, pode utilizar o arquivo lattes.csv como fonte de validação.</li>
   <li>Acesse a pasta do projeto e execute o arquivo app.py com o seguinte comando:</li>
-  <pre><code>python app.py</code></pre>
+  <h4>Windows:</h4>
+  <pre><code>py app.py</code></pre>
+  <h4>Linux:</h4>
+  <pre><code>python3 app.py</code></pre>
   <li>A API estará disponível no endereço http://localhost:5000. Você pode acessar a documentação da API pelo Swagger UI no endereço http://localhost:5000/apidocs.</li>
 </ol>
 
@@ -39,16 +44,16 @@
 <p>Este endpoint realiza a validação de um número de identificação Lattes, verificando se o mesmo existe no banco de dados MySQL ou no arquivo CSV.</p>
 
 <ul>
-  <li>URL: /lattes/{lattes_number}</li>
+  <li>URI: /lattes/{lattes_number}</li>
   <li>Método: GET</li>
-  <li>Parâmetros:</li>
+  <li>Parâmetro:</li>
   <ul>
     <li>lattes_number (obrigatório): Número de identificação Lattes.</li>
   </ul>
   <li>Respostas:</li>
   <ul>
     <li>200 OK: Retorna uma mensagem informando que o número de identificação Lattes é válido.</li>
-    <li>400 Bad Request: Retorna uma mensagem informando que o número de identificação Lattes é inválido.</li>
+    <li>404 Not Found: Retorna uma mensagem informando que o número de identificação Lattes não foi encontrado.</li>
   </ul>
 </ul>
 

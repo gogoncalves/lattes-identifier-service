@@ -1,0 +1,52 @@
+swagger: '2.0'
+info:
+  title: API para validação do número Lattes
+  version: 0.1.0
+  description: Esta API permite validar o número de identificação Lattes.
+schemes:
+  - http
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /lattes/{lattes_number}:
+    get:
+      tags:
+        - Lattes
+      description: Retorna a validade de um numero Lattes
+      parameters:
+        - name: lattes_number
+          in: path
+          description: Numero id Lattes
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Lattes validado com sucesso
+          schema:
+            type: object
+            properties:
+              id_lattes:
+                type: integer
+                description: Número de identificação Lattes.
+              message:
+                type: string
+                description: Mensagem de validação.
+              status:
+                type: boolean
+                description: Status da validação.
+        '404':
+          description: Numero de identificacao Lattes invalido
+          schema:
+            type: object
+            properties:
+              id_lattes:
+                type: integer
+                description: Número de identificação Lattes.
+              message:
+                type: string
+                description: Mensagem de erro.
+              status:
+                type: boolean
+                description: Status da validação
