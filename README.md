@@ -27,7 +27,7 @@
 
 <ol>
   <li>Clone o repositório em sua máquina:</li>
-  <pre><code>git clone https://github.com/GOGoncalves/api-lattes</code></pre>
+  <pre><code>git clone https://github.com/GOGoncalves/lattes-identifier-api</code></pre>
   <li>Abra o arquivo db_config.txt localizado na pasta config e configure com as informações do seu banco de dados MySQL. Caso não possua um banco de dados, pode utilizar o arquivo lattes.csv como fonte de validação.</li>
   <li>Acesse a pasta do projeto e execute o arquivo app.py com o seguinte comando:</li>
   <h4>Windows:</h4>
@@ -37,7 +37,7 @@
   <li>A API estará disponível no endereço http://localhost:5000. Você pode acessar a documentação da API pelo Swagger UI no endereço http://localhost:5000/apidocs.</li>
 </ol>
 
-<h2>Endpoints</h2>
+<h2>Endpoint</h2>
 
 <h3>Validação de número de identificação Lattes</h3>
 
