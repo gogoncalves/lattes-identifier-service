@@ -37,7 +37,7 @@
   <li>A API estará disponível no endereço http://localhost:5000. Você pode acessar a documentação da API pelo Swagger UI no endereço http://localhost:5000/apidocs.</li>
 </ol>
 
-<h2>Endpoints</h2>
+<h2>Endpoint</h2>
 
 <h3>Validação de número de identificação Lattes</h3>
 
