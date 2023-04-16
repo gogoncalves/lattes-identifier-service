@@ -63,4 +63,4 @@
 
 <h2>Licença</h2>
 
-<p>Este projeto está licenciado sob a Licença MIT - consulte o arquivo <a href="https://github.com/GOGoncalves/lattes-identifier-api/blob/main/LICENSE.md">LICENSE</a> para obter mais detalhes.</p>
+<p>Este projeto está licenciado sob a Licença Apache 2.0 - consulte o arquivo <a href="https://github.com/GOGoncalves/lattes-identifier-api/blob/main/LICENSE.md">LICENSE</a> para obter mais detalhes.</p>
