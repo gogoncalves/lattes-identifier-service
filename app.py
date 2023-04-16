@@ -1,18 +1,23 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
 from flasgger import Swagger
-from lattes_validator import LattesValidator
+from domain.lattes_validator import LattesValidator
 
 app = Flask(__name__)
 swagger = Swagger(app)
 
 validator = LattesValidator()
 
+
+@app.before_first_request
+def custom_startup_message():
+    print("Swagger UI: http://localhost:5000/apidocs")
+    print("Endpoint: http://localhost:5000/lattes/{lattes_number}")
+    print("Parâmetro: lattes_number (obrigatório): Número de identificação Lattes.")
+
+
 @app.route('/lattes/<int:lattes_number>', methods=['GET'])
 def validate_lattes(lattes_number):
     """
-    Este endpoint valida um número de identificação Lattes.
-
-    ---
     parameters:
         - name: lattes_number
           in: path
@@ -26,9 +31,20 @@ def validate_lattes(lattes_number):
             description: Número de identificação Lattes inválido
     """
     if validator.validate_lattes(lattes_number):
-        return jsonify({"message": "Lattes validado com sucesso"}), 200
+        data = {'id_lattes': lattes_number,
+                'message': 'Lattes validado com sucesso',
+                'status': True}
+        response = make_response(jsonify(data), 200)
+        response.headers['Copyright'] = 'Copyright (c) 2023 Gustavo Goncalves. All rights reserved.'
+        return response
     else:
-        return jsonify({"message": "Número de identificação Lattes inválido"}), 400
+        data = {'id_lattes': lattes_number,
+                'message': 'Numero de identificacao Lattes invalido',
+                'status': False}
+        response = make_response(jsonify(data), 404)
+        response.headers['Copyright'] = 'Copyright (c) 2023 Gustavo Goncalves. All rights reserved.'
+        return response
+
 
 if __name__ == '__main__':
     app.run()

@@ -55,3 +55,7 @@
 <h2>Documentação</h2>
 
 <p>A documentação completa da API pode ser acessada através do Swagger UI, disponível no endereço http://localhost:5000/apidocs.</p>
+
+<h2>Licença</h2>
+
+<p>Este projeto está licenciado sob a Licença MIT - consulte o arquivo <a href="https://github.com/GOGoncalves/lattes-identifier-api/LICENSE.md">LICENSE</a> para obter mais detalhes.</p>
