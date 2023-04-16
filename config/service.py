@@ -10,8 +10,8 @@ def read_txt(path):
                     pass
             return db_config
     except FileNotFoundError:
-        print(f"\U0001F6AB Erro: arquivo {path} não encontrado.")
+        print(f"\U0001F6AB Erro: archive {path} not found.")
         return {}
     except Exception as e:
-        print(f"\U0001F6AB Erro ao ler arquivo {path}: {str(e)}")
+        print(f"\U0001F6AB Error reading file {path}: {str(e)}")
         return {}

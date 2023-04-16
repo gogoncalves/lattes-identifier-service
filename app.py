@@ -18,16 +18,20 @@ def custom_startup_message():
 @app.route('/lattes/<int:lattes_number>', methods=['GET'])
 def validate_lattes(lattes_number):
     if validator.validate_lattes(lattes_number):
-        data = {'id_lattes': lattes_number,
-                'message': 'Lattes validado com sucesso',
-                'status': True}
+        data = {
+            'id_lattes': lattes_number,
+            'message': 'Lattes validado com sucesso',
+            'status': True
+        }
         response = make_response(jsonify(data), 200)
         response.headers['Copyright'] = 'Copyright (c) 2023 Gustavo Goncalves. All rights reserved.'
         return response
     else:
-        data = {'id_lattes': lattes_number,
-                'message': 'Numero de identificacao Lattes invalido',
-                'status': False}
+        data = {
+            'id_lattes': lattes_number,
+            'message': 'Numero de identificacao Lattes invalido',
+            'status': False
+        }
         response = make_response(jsonify(data), 404)
         response.headers['Copyright'] = 'Copyright (c) 2023 Gustavo Goncalves. All rights reserved.'
         return response
