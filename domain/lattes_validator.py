@@ -35,8 +35,7 @@ class LattesValidator:
             print("Could not establish connection to MYSQL database")
             print("Database credentials:", db_config)
             print("Access the db_config file and correct to the correct settings")
-            print(
-                f"Path: {dir_path}\LATTES-IDENTIFIER-API\config\db_config.txt")
+            print(f"Path: {dir_path}\LATTES-IDENTIFIER-API\config\db_config.txt")
 
         return False
 
