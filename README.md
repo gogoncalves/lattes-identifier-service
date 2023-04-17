@@ -31,9 +31,14 @@
   <li>Abra o arquivo db_config.txt localizado na pasta config e configure com as informações do seu banco de dados MySQL. Caso não possua um banco de dados, pode utilizar o arquivo lattes.csv como fonte de validação.</li>
   <li>Acesse a pasta do projeto e execute o arquivo app.py com o seguinte comando:</li>
   <h4>Windows:</h4>
-  <pre><code>py app.py</code></pre>
+  <pre><code>py main.py</code></pre>
   <h4>Linux:</h4>
-  <pre><code>python3 app.py</code></pre>
+  <pre><code>python3 main.py</code></pre>
+  <li>Caso queira realizar testes unitarios, acesse a pasta raiz do projeto e execute o seguinte comando:</li>
+  <h4>Windows:</h4>
+  <pre><code>py -m unittest discover .\tests\</code></pre>
+  <h4>Linux:</h4>
+  <pre><code>python3 unittest discover .\tests\</code></pre>
   <li>A API estará disponível no endereço http://localhost:5000. Você pode acessar a documentação da API pelo Swagger UI no endereço http://localhost:5000/apidocs.</li>
 </ol>
 
