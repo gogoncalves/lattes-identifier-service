@@ -66,7 +66,3 @@
 <h2>Licença</h2>
 
 <p>Este projeto está licenciado sob a Licença Apache 2.0 - consulte o arquivo <a href="https://github.com/GOGoncalves/lattes-identifier-api/blob/main/LICENSE.md">LICENSE</a> para obter mais detalhes.</p>
-
-
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgogoncalves%2Flattes-identifier-api.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgogoncalves%2Flattes-identifier-api?ref=badge_large)
