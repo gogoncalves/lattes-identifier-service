@@ -30,18 +30,58 @@
   <li>Clone o repositório em sua máquina:</li>
   <pre><code>git clone https://github.com/GOGoncalves/lattes-identifier-api</code></pre>
   <li>Abra o arquivo db_config.txt localizado na pasta config e configure com as informações do seu banco de dados MySQL. Caso não possua um banco de dados, pode utilizar o arquivo lattes.csv como fonte de validação.</li>
-  <li>Acesse a pasta do projeto e execute o arquivo app.py com o seguinte comando:</li>
-  <h4>Windows:</h4>
-  <pre><code>py main.py</code></pre>
+  <li>Acesse a pasta do projeto e execute o arquivo main.py com o seguinte comando:</li>
   <h4>Linux:</h4>
   <pre><code>python3 main.py</code></pre>
-  <li>Caso queira realizar testes unitarios, acesse a pasta raiz do projeto e execute o seguinte comando:</li>
   <h4>Windows:</h4>
-  <pre><code>py -m unittest discover .\tests\</code></pre>
+  <pre><code>py main.py</code></pre>
+  <li>Caso queira realizar testes unitarios, acesse a pasta raiz do projeto e execute o seguinte comando:</li>
   <h4>Linux:</h4>
   <pre><code>python3 unittest discover .\tests\</code></pre>
+  <h4>Windows:</h4>
+  <pre><code>py -m unittest discover .\tests\</code></pre>
   <li>A API estará disponível no endereço http://localhost:5000. Você pode acessar a documentação da API pelo Swagger UI no endereço http://localhost:5000/apidocs.</li>
 </ol>
+
+<h2>Estrutura do Projeto</h2>
+
+<ul>
+  <li>lattes-identifier-api
+    <ul>
+      <li>main.py</li>
+      <li>requirements.txt</li>
+      <li>README.md</li>
+      <li>swagger.yml</li>
+      <li>tests
+        <ul>
+          <li>TestLattesController.py</li>
+          <li>TestLattesService.py</li>
+        </ul>
+      </li>
+      <li>config
+        <ul>
+          <li>config_service.py</li>
+          <li>db_config.txt</li>
+        </ul>
+      </li>
+      <li>controller
+        <ul>
+          <li>lattes_controller.py</li>
+        </ul>
+      </li>
+      <li>service
+        <ul>
+          <li>lattes_service.py</li>
+        </ul>
+      </li>
+      <li>static
+        <ul>
+          <li>lattes.csv</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h2>Endpoint</h2>
 
