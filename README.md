@@ -3,7 +3,7 @@
 
 <p>Esta API tem como objetivo validar o número identificador Lattes, podendo verificar se o mesmo existe em um banco de dados MySQL ou em um arquivo CSV com mais de 1 milhão e 30 mil linhas;</p>
 <p>O <a href="https://www.gov.br/cnpq/pt-br">CNPq</a> disponibiliza, periodicamente, todos os ID dos Currículos Lattes cadastrados;</p>
-<p>Foi utilizado como base os <a href="http://memoria.cnpq.br/documents/313759/83395da6-f582-46bc-a308-060a6ec1ceaa">dados</a> fornecidos pela <a href="http://memoria.cnpq.br/web/portal-lattes/extracoes-de-dados">Plataforma Lattes</a> que é uma base de dados pública do CNPq, para realizar a validação do Número identificador.</p>
+<p>Foi utilizado como base os <a href="http://memoria.cnpq.br/documents/313759/83395da6-f582-46bc-a308-060a6ec1ceaa">dados</a> fornecidos pela <a href="http://memoria.cnpq.br/web/portal-lattes/extracoes-de-dados">Plataforma Lattes</a>, que é uma base de dados pública do CNPq, para realizar a validação do Número identificador.</p>
 
 
 
