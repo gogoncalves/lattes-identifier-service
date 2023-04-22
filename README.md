@@ -14,7 +14,6 @@
 <ul>
   <li>Flask</li>
   <li>pandas</li>
-  <li>dask</li>
   <li>tdqm</li>
   <li>mysql-connector-python</li>
   <li>urllib3</li>

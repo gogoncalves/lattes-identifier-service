@@ -20,5 +20,4 @@ six==1.16.0
 tzdata==2023.3
 Werkzeug==2.2.3
 urllib3==1.26.15
-dask==2023.4.0
 tqdm==4.65.0

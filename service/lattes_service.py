@@ -7,8 +7,8 @@ import time
 import requests
 from config.config_service import read_txt
 import re
-import dask.dataframe as dd
 from tqdm import tqdm
+import glob
 
 
 class LattesService:
@@ -26,7 +26,7 @@ class LattesService:
         if response.status_code != 200:
             print('Download failed')
             return False
-        
+
         print('Download started')
         content_disp = response.headers.get('Content-Disposition', '')
         filename = re.findall('filename="(.+)"', content_disp)[0]
@@ -44,8 +44,8 @@ class LattesService:
 
         with tqdm(unit='B', unit_scale=True, desc='Download progress', leave=True, miniters=1, ncols=100) as t:
             urllib.request.urlretrieve(url, caminho_zip, reporthook=lambda blocks_read,
-                                        block_size, total_size: t.update(block_size * blocks_read))
-            
+                                       block_size, total_size: t.update(block_size * blocks_read))
+
         with zipfile.ZipFile(caminho_zip, 'r') as zip_ref:
             zip_ref.extractall(destination_path)
 
@@ -55,6 +55,7 @@ class LattesService:
 
         if os.path.exists(extract_path) and os.path.isfile(extract_path):
             df = pd.read_csv(extract_path, sep=',')
+            time.sleep(2)
             df.to_csv(new_file_path, sep=';', index=False)
             time.sleep(2)
             os.remove(extract_path)
@@ -94,19 +95,23 @@ class LattesService:
                 "An unexpected error occurred while trying to connect to the MySQL database")
             print(f"Error: {e}")
 
+        print("Lattes not valid in MySQL database")
         return False
 
     def search_lattes_in_csv(self, lattes_number):
         print("Starting CSV file validation")
-
-        csv_files = [f for f in os.listdir('./static') if f.endswith('.csv')]
+        csv_files = glob.glob(r'./static/*.csv')
 
         for csv_file in csv_files:
-            df = dd.read_csv('./static/' + csv_file, sep=';')
-            if (df["NRO_ID_CNPQ"] == lattes_number).any().compute():
-                print("\u2705 Valid lattes in CSV file")
-                return True
-
+            print(csv_file)
+            try:
+                df = pd.read_csv(csv_file, sep=';')
+                if lattes_number in df["NRO_ID_CNPQ"].values:
+                    print("\u2705 Valid lattes in CSV file")
+                    return True
+            except:
+                print(f"\U0001F6AB Error reading file: {csv_file}")
+        
         print("\U0001F6AB Lattes not found in CSV files")
         return False
 
