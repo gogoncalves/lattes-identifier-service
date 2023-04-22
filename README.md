@@ -82,7 +82,7 @@
       </li>
       <li>static
         <ul>
-          <li>lattes.csv</li>
+          <li>lattes_transformed.csv</li>
         </ul>
       </li>
     </ul>
