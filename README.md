@@ -1,7 +1,7 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgogoncalves%2Flattes-identifier-api.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgogoncalves%2Flattes-identifier-api?ref=badge_shield)
-<h1>API de Validação de Número de Identificação Lattes</h1>
+<h1>Endpoint para Validação do Número de Identificação Lattes</h1>
 
-<p>Esta API tem como objetivo validar o número identificador Lattes, podendo verificar se o mesmo existe em um banco de dados MySQL ou em um arquivo CSV com mais de 1 milhão e 30 mil linhas;</p>
+<p>Este endpoint tem como objetivo validar o número identificador Lattes, podendo verificar se o mesmo existe em um banco de dados MySQL ou em um arquivo CSV;</p>
 <p>O <a href="https://www.gov.br/cnpq/pt-br">CNPq</a> disponibiliza, periodicamente, todos os ID dos Currículos Lattes cadastrados;</p>
 <p>Foi utilizado como base os <a href="http://memoria.cnpq.br/documents/313759/83395da6-f582-46bc-a308-060a6ec1ceaa">dados</a> fornecidos pela <a href="http://memoria.cnpq.br/web/portal-lattes/extracoes-de-dados">Plataforma Lattes</a>, que é uma base de dados pública do <a href="https://www.gov.br/cnpq/pt-br">CNPq</a>, para realizar a validação do Número identificador.</p>
 
@@ -9,12 +9,15 @@
 
 <h2>Requisitos</h2>
 
-<p>Para utilizar esta API, é necessário ter o Python 3.6 ou superior instalado em sua máquina. Além disso, é preciso instalar os seguintes pacotes:</p>
+<p>Para utilizar este Endpoint, é necessário ter o Python 3.6 ou superior instalado em sua máquina. Além disso, é preciso instalar os seguintes pacotes:</p>
 
 <ul>
   <li>Flask</li>
   <li>pandas</li>
+  <li>dask</li>
+  <li>tdqm</li>
   <li>mysql-connector-python</li>
+  <li>urllib3</li>
   <li>flasgger</li>
 </ul>
 
