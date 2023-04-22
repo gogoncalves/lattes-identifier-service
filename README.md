@@ -35,7 +35,7 @@
 <ol>
   <li>Clone o repositório em sua máquina:</li>
   <pre><code>git clone https://github.com/GOGoncalves/lattes-identifier-service</code></pre>
-  <li>Abra o arquivo db_config.txt localizado na pasta config e configure com as informações do seu banco de dados MySQL. Caso não possua um banco de dados, pode utilizar o arquivo lattes_transformed.csv como fonte de validação ou altere o toggle para True e baixe da Web um arquivo csv atualizado, não esqueça de manter a URL para download atualizada.</li>
+  <li>Abra o arquivo db_config.txt localizado na pasta config e configure com as informações do seu banco de dados MySQL. Caso não possua um banco de dados, pode utilizar o arquivo lattes_transformed.csv como fonte de validação ou altere o toggle para True e baixe da Web um arquivo CSV atualizado, não esqueça de manter a URL para download atualizada.</li>
   <li>Acesse a pasta do projeto e execute o arquivo main.py com o seguinte comando:</li>
   <h4>Linux:</h4>
   <pre><code>python3 main.py</code></pre>
