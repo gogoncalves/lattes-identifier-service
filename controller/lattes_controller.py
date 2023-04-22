@@ -11,7 +11,7 @@ class LattesController:
     def validate_lattes(self, lattes_number):
         is_valid = LattesService.validate_lattes(lattes_number)
         data = {
-            'id_lattes': lattes_number,
+            'idLattes': lattes_number,
             'status': is_valid,
             'message': 'Lattes successfully validated' if is_valid else 'Invalid Lattes identification number'
         }
