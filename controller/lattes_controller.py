@@ -10,21 +10,11 @@ class LattesController:
 
     def validate_lattes(self, lattes_number):
         is_valid = LattesService.validate_lattes(lattes_number)
-        if is_valid:
-            data = {
-                'id_lattes': lattes_number,
-                'message': 'Lattes validado com sucesso',
-                'status': True
-            }
-            response = make_response(jsonify(data), 200)
-            response.headers['Copyright'] = 'Copyright (c) 2023 Gustavo Goncalves.'
-            return response
-        else:
-            data = {
-                'id_lattes': lattes_number,
-                'message': 'Numero de identificacao Lattes invalido',
-                'status': False
-            }
-            response = make_response(jsonify(data), 404)
-            response.headers['Copyright'] = 'Copyright (c) 2023 Gustavo Goncalves.'
-            return response
+        data = {
+            'id_lattes': lattes_number,
+            'status': is_valid,
+            'message': 'Lattes successfully validated' if is_valid else 'Invalid Lattes identification number'
+        }
+        response = make_response(jsonify(data), 200 if is_valid else 404)
+        response.headers['Copyright'] = 'Copyright (c) 2023 Gustavo Goncalves.'
+        return response

@@ -10,7 +10,6 @@ MarkupSafe==2.1.2
 mistune==2.0.5
 mysql-connector-python==8.0.32
 numpy==1.24.2
-pandas==2.0.0
 protobuf==3.20.3
 pyrsistent==0.19.3
 python-dateutil==2.8.2
@@ -19,3 +18,5 @@ PyYAML==6.0
 six==1.16.0
 tzdata==2023.3
 Werkzeug==2.2.3
+urllib3==1.26.15
+dask==2023.4.0
