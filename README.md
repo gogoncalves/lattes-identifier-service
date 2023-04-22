@@ -111,7 +111,7 @@
 
 <h2>Documentação</h2>
 
-<p>A documentação completa da API pode ser acessada através do Swagger UI, disponível no endereço http://localhost:5000/apidocs.</p>
+<p>A documentação completa da API pode ser acessada através do Flasgger, baseado em Swagger, disponível no endereço http://localhost:5000/apidocs.</p>
 
 <h2>Licença</h2>
 
